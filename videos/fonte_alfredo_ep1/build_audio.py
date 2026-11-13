@@ -219,3 +219,9 @@ mo = music[:end] * 0.9 + sfx[:end]
 mo = mo / max(1e-6, np.abs(mo).max()) * 0.9
 w = wave.open(os.path.join(D, 'trilha.wav'), 'w'); w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR); w.writeframes((mo * 32767).astype(np.int16).tobytes()); w.close()
 print('total', TOTAL, 'starts', [round(x, 2) for x in starts])
+
+# version without narration (music ducked where the narrator speaks + sfx)
+nv = (music * duck * 0.9 + sfx)[:end]
+nv[-int(.8 * SR):] *= np.linspace(1, 0, int(.8 * SR))
+nv = nv / max(1e-6, np.abs(nv).max()) * 0.9
+w = wave.open(os.path.join(D, 'sem_voz.wav'), 'w'); w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR); w.writeframes((nv * 32767).astype(np.int16).tobytes()); w.close()
