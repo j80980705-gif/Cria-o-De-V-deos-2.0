@@ -1,0 +1,198 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@800;900&display=swap">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: #000; }
+#v { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: 'Lilita One', Impact, sans-serif; color: #23203A; }
+.scene { position: absolute; inset: 0; display: none; overflow: hidden; }
+.cam { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; transform-origin: 0 0; }
+.abs { position: absolute; transform-origin: 50% 50%; }
+.lines { position: absolute; inset: 0; background-image: repeating-linear-gradient(to bottom, transparent 0 63px, #CFE3F5 63px 66px); }
+.rays { position: absolute; left: -500px; top: -100px; width: 2080px; height: 2080px; border-radius: 50%;
+  background: repeating-conic-gradient(rgba(255,255,255,.25) 0deg 10deg, rgba(255,255,255,0) 10deg 20deg); }
+.big { text-align: center; -webkit-text-stroke: 16px #23203A; paint-order: stroke fill; color: #FFF; line-height: .95; }
+.pill { background: #FFF; border: 8px solid #23203A; border-radius: 34px; padding: 12px 34px; box-shadow: 10px 10px 0 #23203A; font-size: 64px; white-space: nowrap; }
+.stamp { border: 12px solid #D9452F; color: #D9452F; border-radius: 24px; padding: 6px 30px; font-size: 96px; background: rgba(255,248,231,.94); white-space: nowrap; }
+.ring { position: absolute; border: 12px solid #D9452F; border-radius: 50%; box-shadow: 0 0 0 8px #FFF; }
+#tag { position: absolute; left: 0; right: 0; top: 40px; text-align: center; font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 32px; letter-spacing: 5px; color: #FFF; text-shadow: 0 3px 0 #23203A, 0 0 12px rgba(0,0,0,.4); z-index: 9; }
+#title { position: absolute; left: 50px; right: 50px; top: 1440px; z-index: 8; font-size: 120px; }
+</style></head>
+<body>
+<div id="v">
+  __SPRITE__
+
+  <!-- 1 ESSE É O ALFREDO -->
+  <div class="scene" id="s1" style="background:#FFF8E7"><div class="lines"></div>
+    <svg class="abs" id="s1-alf" viewBox="0 0 300 400" style="left:90px; top:200px; width:900px; height:1200px"><use href="#alf-bg"/><use href="#alf"/><use href="#m-happy"/></svg>
+  </div>
+
+  <!-- 2 14 ANOS -->
+  <div class="scene" id="s2" style="background:#FFC83D"><div class="rays" id="s2-rays"></div>
+    <svg class="abs" id="s2-alf" viewBox="0 0 300 400" style="left:330px; top:520px; width:720px; height:960px"><use href="#alf"/><use href="#m-happy"/></svg>
+    <div class="abs" id="s2-age" style="left:60px; top:260px; width:420px; height:420px; border-radius:50%; background:#FFF; border:14px solid #23203A; box-shadow:14px 14px 0 #23203A; display:flex; flex-direction:column; align-items:center; justify-content:center">
+      <div style="font-size:230px; line-height:.85">14</div><div style="font-size:80px">ANOS</div></div>
+    <div class="abs stamp" id="s2-stamp" style="left:80px; top:1180px; transform:rotate(-10deg)">ALUNO NOVO</div>
+  </div>
+
+  <!-- 3 INTERIOR -->
+  <div class="scene" id="s3" style="background:#8FD3F4">
+    <div class="abs" style="left:0; right:0; top:1150px; height:800px; background:#7BC96F; border-top:10px solid #23203A"></div>
+    <svg class="abs" viewBox="0 0 200 200" style="left:40px; top:820px; width:280px; height:280px"><circle cx="100" cy="90" r="70" fill="#4FA35A" stroke="#23203A" stroke-width="8"/><rect x="88" y="140" width="24" height="60" fill="#8A5A2B" stroke="#23203A" stroke-width="8"/></svg>
+    <svg class="abs" viewBox="0 0 200 200" style="left:800px; top:860px; width:240px; height:240px"><circle cx="100" cy="90" r="70" fill="#4FA35A" stroke="#23203A" stroke-width="8"/><rect x="88" y="140" width="24" height="60" fill="#8A5A2B" stroke="#23203A" stroke-width="8"/></svg>
+    <div class="abs" id="s3-sign" style="left:500px; top:280px">
+      <div class="pill" style="background:#2E9A5E; color:#FFF; font-size:58px">INTERIOR</div>
+      <div class="pill" style="background:#FFF; font-size:58px; margin-top:24px">CIDADE GRANDE →</div>
+    </div>
+    <svg class="abs" id="s3-alf" viewBox="0 0 300 400" style="left:140px; top:470px; width:600px; height:800px"><use href="#alf"/><use href="#m-happy"/></svg>
+    <div class="abs pill" id="s3-mala" style="left:120px; top:1240px; background:#C9821F; color:#FFF; transform:rotate(-4deg)">MALA PRONTA</div>
+  </div>
+
+  <!-- 4 MÃE TÂNIA -->
+  <div class="scene" id="s4" style="background:#F6D9E8">
+    <svg class="abs" id="s4-alf" viewBox="0 0 300 400" style="left:20px; top:520px; width:600px; height:800px"><use href="#alf"/><use href="#m-happy"/></svg>
+    <svg class="abs" id="s4-tan" viewBox="0 0 300 400" style="left:500px; top:470px; width:560px; height:840px"><use href="#tania"/></svg>
+    <svg class="abs" id="s4-heart" viewBox="0 0 100 90" style="left:440px; top:400px; width:200px; height:180px"><path d="M50 85 C10 55 0 35 10 20 C22 2 44 6 50 22 C56 6 78 2 90 20 C100 35 90 55 50 85 Z" fill="#E8553D" stroke="#23203A" stroke-width="6"/></svg>
+    <div class="abs pill" id="s4-label" style="left:560px; top:300px; background:#C7A6F2">DONA TÂNIA</div>
+  </div>
+
+  <!-- 5 CARACTERÍSTICAS (camera) -->
+  <div class="scene" id="s5" style="background:#33467F">
+    <div class="cam" id="cam">
+      <svg class="abs" viewBox="0 0 300 400" style="left:90px; top:300px; width:900px; height:1200px"><use href="#alf"/><use href="#m-happy"/></svg>
+      <div class="ring" id="ring"></div>
+    </div>
+    <div class="abs" style="left:0; right:0; top:180px; text-align:center"><span class="pill" id="s5-k" style="font-size:46px; background:#FFC83D">CARACTERÍSTICAS</span></div>
+  </div>
+
+  <!-- 6 IMAGINA -->
+  <div class="scene" id="s6" style="background:#FFC83D"><div class="rays" id="s6-rays"></div>
+    <div class="abs" id="s6-cloud" style="left:120px; top:250px; width:840px; height:430px; background:#FFF; border:12px solid #23203A; border-radius:220px; box-shadow:14px 14px 0 #23203A; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px">
+      <div style="font-size:66px; color:#2E9A5E">TODO MUNDO VAI</div><div style="font-size:66px; color:#2E9A5E">GOSTAR DE MIM!</div><div style="font-size:90px; color:#FFC83D; -webkit-text-stroke:8px #23203A; paint-order:stroke fill">★ ★ ★</div></div>
+    <svg class="abs" id="s6-alf" viewBox="0 0 300 400" style="left:190px; top:640px; width:700px; height:933px"><use href="#alf"/><use href="#m-happy"/></svg>
+  </div>
+
+  <!-- 7 REALIDADE -->
+  <div class="scene" id="s7" style="background:#4E5D80">
+    <svg class="abs" id="s7-alf" viewBox="0 0 300 400" style="left:140px; top:430px; width:800px; height:1066px"><use href="#alf"/><use href="#m-shock"/></svg>
+    <div class="abs stamp" id="s7-stamp" style="left:150px; top:300px; transform:rotate(-8deg); font-size:110px">SÓ QUE NÃO</div>
+  </div>
+
+  <!-- 8 FINAL -->
+  <div class="scene" id="s8" style="background:#3B2A8C">
+    <svg class="abs" id="s8-alf" viewBox="0 0 300 400" style="left:190px; top:300px; width:700px; height:933px"><use href="#alf-bg"/><use href="#alf"/><use href="#m-happy"/></svg>
+    <div class="abs big" id="s8-name" style="left:0; right:0; top:1180px; font-size:220px; color:#FFC83D">ALFREDO</div>
+    <div class="abs big" id="s8-sub" style="left:0; right:0; top:1400px; font-size:96px">ESCOLA NOVA</div>
+    <div class="abs" id="s8-btn" style="left:250px; top:1580px; width:580px; text-align:center; background:#3577C9; color:#FFF; border:8px solid #23203A; border-radius:80px; font-size:64px; padding:18px 0; box-shadow:10px 10px 0 #23203A">SEGUE PRA ACOMPANHAR</div>
+  </div>
+
+  <div id="tag">APRESENTAÇÃO DO PERSONAGEM</div>
+  <div class="big" id="title"></div>
+</div>
+<script>
+const clamp = (x, a = 0, b = 1) => Math.max(a, Math.min(b, x));
+const easeOut = x => 1 - Math.pow(1 - x, 3);
+const easeIO = x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+const back = x => { const c1 = 1.9, c3 = c1 + 1; return 1 + c3 * Math.pow(x - 1, 3) + c1 * Math.pow(x - 1, 2); };
+const $ = id => document.getElementById(id);
+
+// scene times (seconds)
+const S = [0, 4.5, 9.5, 14.5, 20, 36, 42, 47.5, 54];
+const TOTAL = S[S.length - 1];
+// traits inside scene 5: [label, x, y, ring diameter, zoom]
+const TR = [
+  ['MONOCELHA', 549, 668, 360, 1.9],
+  ['SARDAS', 396, 805, 240, 2.1],
+  ['METADE CABELO...', 430, 570, 340, 1.8],
+  ['...METADE CARECA', 654, 545, 300, 1.8],
+  ['DENTE TORTO COM CÁRIE', 562, 850, 240, 2.4],
+  ['OBESO', 543, 1190, 820, 1.0],
+];
+const TS = 21, TD = (S[5] - TS) / TR.length;
+
+const TITLES = [
+  [S[0] + .6, S[1], 'ESSE É O<br><span style="color:#FFC83D">ALFREDO</span>'],
+  [S[2] + .4, S[3], 'VEIO LÁ DO<br><span style="color:#FFC83D">INTERIOR</span>'],
+  [S[3] + .5, S[4], 'MORA COM<br><span style="color:#C7A6F2">A MÃE</span>'],
+  [S[5] + .4, S[6], 'ELE ACHA QUE TUDO VAI SAIR<br><span style="color:#FFC83D">COMO ELE IMAGINA</span>'],
+  [S[6] + .7, S[7], 'MAS NÃO VAI SER<br><span style="color:#FF5A4E">COMO ELE IMAGINAVA</span>'],
+];
+
+const A = [];
+const pop = (id, t0, base = '') => A.push([id, t0, 'pop', base]);
+const stamp = (id, t0, base = '') => A.push([id, t0, 'stamp', base]);
+const slide = (id, t0, base = '') => A.push([id, t0, 'slide', base]);
+pop('s1-alf', .1);
+pop('s2-age', S[1] + .2); pop('s2-alf', S[1] + .1); stamp('s2-stamp', S[1] + 2.2, 'rotate(-10deg)');
+pop('s3-alf', S[2] + .1); slide('s3-sign', S[2] + .8); pop('s3-mala', S[2] + 2.4, 'rotate(-4deg)');
+pop('s4-alf', S[3] + .1); pop('s4-tan', S[3] + 1.2); pop('s4-heart', S[3] + 2.4); pop('s4-label', S[3] + 1.8);
+pop('s6-alf', S[5] + .1); pop('s6-cloud', S[5] + 1.6);
+pop('s7-alf', S[6]); stamp('s7-stamp', S[6] + .35, 'rotate(-8deg)');
+pop('s8-alf', S[7] + .1); stamp('s8-name', S[7] + .8); pop('s8-sub', S[7] + 1.6); pop('s8-btn', S[7] + 2.6);
+
+function render(t) {
+  for (let i = 0; i < 8; i++) {
+    const el = $('s' + (i + 1)), a = S[i], b = S[i + 1];
+    if (t >= a && t < b) {
+      el.style.display = 'block';
+      const p = clamp((t - a) / .25);
+      el.style.transform = i === 4 ? '' : `scale(${(1.08 - .08 * easeOut(p)) * (1 + .035 * (t - a) / (b - a))})`;
+    } else el.style.display = 'none';
+  }
+  for (const [id, t0, kind, base] of A) {
+    const el = $(id);
+    if (t < t0) { el.style.opacity = 0; continue; }
+    const p = clamp((t - t0) / (kind === 'stamp' ? .22 : .4));
+    let tr = kind === 'pop' ? `scale(${.3 + .7 * back(p)})` : kind === 'stamp' ? `scale(${2.2 - 1.2 * easeOut(p)})` : `translateX(${(1 - easeOut(p)) * 400}px)`;
+    el.style.opacity = clamp(p * 3);
+    el.style.transform = tr + ' ' + base;
+  }
+  const bob = Math.sin(t * 3.2) * 10;
+  for (const id of ['s1-alf', 's2-alf', 's3-alf', 's4-alf', 's6-alf', 's8-alf']) if ($(id).style.opacity !== '0') $(id).style.transform += ` translateY(${bob}px)`;
+  $('s3-alf').style.transform += ` translateX(${Math.sin(t * 6) * 6}px)`;
+  $('s4-heart').style.transform += ` scale(${1 + .08 * Math.sin(t * 9)})`;
+  $('s2-rays').style.transform = `rotate(${t * 12}deg)`;
+  $('s6-rays').style.transform = `rotate(${t * 12}deg)`;
+  if (t > S[6] + .35 && t < S[6] + 1.2) $('s7-alf').style.transform += ` translateX(${Math.sin(t * 40) * 10 * (1 - (t - S[6] - .35) / .85)}px)`;
+  if (t > S[7] + 3) $('s8-btn').style.transform = `scale(${1 + .05 * Math.sin(t * 8)})`;
+
+  // camera for traits
+  let z = 1, cx = 540, cy = 960, label = 'CARACTERÍSTICAS', ring = null;
+  if (t >= S[4]) {
+    const k = Math.floor((t - TS) / TD);
+    if (t < TS) { z = 1; cx = 540; cy = 900; }
+    else {
+      const i = clamp(k, 0, TR.length - 1), lt = (t - TS) - i * TD;
+      const prev = i === 0 ? ['', 540, 900, 0, 1] : TR[i - 1], cur = TR[i];
+      const m = easeIO(clamp(lt / .55));
+      z = prev[4] + (cur[4] - prev[4]) * m; cx = prev[1] + (cur[1] - prev[1]) * m; cy = prev[2] + (cur[2] - prev[2]) * m;
+      label = cur[0];
+      ring = [cur, clamp((lt - .45) / .3)];
+    }
+  }
+  $('cam').style.transform = `translate(${540 - cx * z}px, ${980 - cy * z}px) scale(${z})`;
+  const r = $('ring');
+  if (ring) {
+    const [c, p] = ring, d = c[3];
+    r.style.display = 'block'; r.style.width = r.style.height = d + 'px'; r.style.left = (c[1] - d / 2) + 'px'; r.style.top = (c[2] - d / 2) + 'px';
+    r.style.opacity = p; r.style.transform = `scale(${1.5 - .5 * easeOut(p)})`; r.style.borderWidth = (12 / c[4]) + 'px'; r.style.boxShadow = `0 0 0 ${8 / c[4]}px #FFF`;
+  } else r.style.display = 'none';
+  // big label at bottom for traits scene
+  const title = $('title');
+  let html = '', t0 = 0;
+  if (t >= S[4] && t < S[5]) {
+    html = t < TS ? 'OLHA SÓ<br><span style="color:#FFC83D">ESSE VISUAL</span>' : `<span style="color:#FFC83D">${label}</span>`;
+    t0 = t < TS ? S[4] + .3 : TS + Math.floor((t - TS) / TD) * TD + .35;
+  } else for (const [a, b, h] of TITLES) if (t >= a && t < b) { html = h; t0 = a; }
+  if (title.dataset.h !== html) { title.innerHTML = html; title.dataset.h = html; }
+  const tp = clamp((t - t0) / .3);
+  title.style.opacity = html ? clamp(tp * 3) : 0;
+  title.style.transform = `scale(${.6 + .4 * back(tp)})`;
+  title.style.fontSize = (html.length > 70 ? 92 : 120) + 'px';
+  $('tag').style.opacity = t < S[7] ? 1 : 0;
+}
+window.TL = { total: TOTAL, S, TS, TD, n: TR.length };
+window.render = render;
+render(0);
+</script>
+</body></html>
